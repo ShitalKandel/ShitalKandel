@@ -20,7 +20,7 @@ public class RTC {
 
         System.out.println("Random teams created and stored in '" + filename + "'");
     }
-
+//assigning rollnum on a list
     public static List<String> RollNum() {
         List<String> rollnum = new ArrayList<>();
 
@@ -45,7 +45,7 @@ public class RTC {
     private static List<List<String>> createRandomGroup(List<String> rollnum, int numGroup) {
         List<List<String>> groups = new ArrayList<>();
         Random random = new Random();
-
+//Making input from CLI for (int) num of group
         List<String> shufflerollforteam = new ArrayList<>(rollnum);
         for (int i = shufflerollforteam.size() - 1; i > 0; i--) {
             int j = random.nextInt(i + 1);
@@ -74,7 +74,7 @@ public class RTC {
 
         return groups;
     }
-
+//string output on filewriter
     private static String storegroup(List<List<String>> createRandomGroup, String filename) {
         try (FileWriter writer = new FileWriter(filename)) {
             for (int i = 0; i < createRandomGroup.size(); i++) {
